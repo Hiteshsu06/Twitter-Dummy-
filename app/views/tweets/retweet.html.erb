@@ -1,0 +1,27 @@
+<h1>retweet here</h1>
+<%= form_with(model: @tweet, url: tweet_retweet_create_path, method: :post) do |form| %>
+  <div>
+     <%= form.hidden_field :username , value: current_user.username%>
+  </div>
+  <div>
+    <%= form.hidden_field :post , value: @tweet_object.post %>
+  </div>
+  <div>
+    <%= form.hidden_field :user_id  , value: current_user.id%>
+  </div>
+  <div>
+    <%= form.hidden_field :image, value:  @tweet_object.image %>
+  </div>
+  <div>
+    <%= form.hidden_field :comments, value: @tweet_object.comments %>
+  </div>
+  <div>
+    <%= form.hidden_field :parent_id, value: @tweet_object.id%>
+  </div>
+  <div>
+    <%= form.hidden_field :like , value: @tweet_object.like %>
+  </div>
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>

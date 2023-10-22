@@ -1,0 +1,37 @@
+<h1>New Tweet</h1>
+
+<%= form_with model: @tweet do |form| %>
+  <div>
+    <%= form.label :username %><br>
+    <%= form.text_field :username %>
+  </div>
+
+  <div>
+    <%= form.label :post %><br>
+    <%= form.text_field :post %>
+  </div>
+
+  <div>
+    <%= form.label :user_id %><br>
+    <%= form.text_field :user_id %>
+  </div>
+  <div>
+    <%= form.label :image %><br>
+    <%= form.text_field :image %>
+  </div>
+  <div>
+    <%= form.label :comment %><br>
+    <%= form.text_field :comment %>
+  </div>
+  <div>
+    <%= form.label :retweet %><br>
+    <%= form.text_field :retweet %>
+  </div>
+  <div>
+    <%= form.label :like %><br>
+    <%= form.text_field :like %>
+  </div>
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>

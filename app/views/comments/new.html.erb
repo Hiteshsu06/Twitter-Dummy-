@@ -1,0 +1,18 @@
+<h1>Comments#new</h1>
+        <div>
+            <%= form_with(model: @comment, url: tweet_comments_path, method: :post) do |form| %>
+              <div>
+                <%= form.label :comment %><br>
+                <%= form.text_field :comment %>
+              </div>
+              <div>
+                <%= form.hidden_field :userId , value: current_user.id%>
+              </div>
+              <div>
+                <%= form.hidden_field :username , value: current_user.username%>
+              </div>
+              <div>
+                <%= form.submit %>
+              </div>
+            <% end %>
+        </div>

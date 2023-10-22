@@ -1,0 +1,79 @@
+@import 'bootstrap';
+.justify-content-end{
+    display: flex;
+    justify-content: end;
+}
+.margin-padding-0px{
+    margin: 0px;
+    padding: 0px;
+}
+.margin-top-10px{
+    margin-top: 10px;
+}
+.body-background-color{
+    background-color: beige;
+}
+.twitter-header{
+    font-size: 25px;
+    font-weight: 700;
+}
+.border-right{
+    border-right: 1px solid #ddd;
+}
+.height-100vh{
+    height: 100vh;
+}
+.profile-tab{
+    margin-top: 50px;
+    font-size: 22px;
+    font-family: cursive;;
+}
+.profile-button{
+    background-color: transparent;
+    border: none;
+}
+.border-left{
+    border-left: 1px solid #ddd 
+}
+.follow-div{
+    font-size: 20px;
+    font-family: cursive;
+    margin-bottom: 10px;
+}
+.margin-50px{
+    margin-top: 50px;
+}
+.home-header{
+    font-size: 28px;
+    font-weight: 700;
+    margin-bottom: 40px;
+}
+.main-post-div{
+    border: 1px solid #ddd;
+    border-left: 0px;
+    border-right: 0px;
+    margin-bottom: 10px;
+}
+.profile-tab li a{
+    text-decoration: none !important;
+    color: black;
+    cursor: pointer;
+}
+.height-fixed{
+    height: 100vh;
+    overflow-y: scroll;
+}
+.custom-tweet-class{
+    margin: 50px;
+    border: 1px solid #ddd;
+}
+.overflow-off{
+    height: 100vh;
+    overflow: scroll;
+}
+.comment-parent{
+    margin: 20px;
+}
+.comment-section{
+    margin: 20px;
+}

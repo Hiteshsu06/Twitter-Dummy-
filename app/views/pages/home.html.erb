@@ -1,0 +1,42 @@
+<% if user_signed_in? %> 
+  <div class="margin-padding-0px">
+  <div class="row margin-padding-0px height-100vh">
+    <div class="col-3 border-right">
+     <div class="margin-top-5px twitter-header">Twitter!!!</div>
+     <div class="profile-tab"><ul>
+    <li> <%= link_to "Profile", pages_path(current_user.id)%> </li>
+     </ul></div>
+    </div>
+    <div class="col-6 overflow-off">
+      <div class="home-header">Home</div>
+       <%  @followers_tweets.each do |tweet| %>
+        <div class="custom-tweet-class">
+         <div><%= tweet.username %></div>
+        <div><%= tweet.post %></div>
+        <div><img src="<%= tweet.image %>" alt="" width="100%" height="350"></div>
+        <div class="comment-parent">
+                <% @comments.each do |data| %>
+                <div class="comment-section">
+                <%if data.tweet_id === tweet.id %>
+                    <div>Username <%= data.username %></div>
+                    <div>Comment <%= data.comment %></div>
+                <%end%>
+                </div>
+                <% end %>
+        </div>
+          <%= link_to "Comments",  new_tweet_comment_path(:tweet_id => tweet.id), class: "navbar-link" %>
+          <%= link_to "Retweet",   tweet_tweet_retweet_path(:tweet_id => tweet.id), class: "navbar-link" %>
+        </div>
+      <% end %>
+    </div>
+    <div class="col-3 margin-top-10px border-left">
+      <div class="justify-content-end"><%= button_to "Log out", destroy_user_session_path, 
+      method: :delete,  class: 'btn btn-dark' %> </div>
+      <div class="follow-div margin-50px">Follower::<%= @followers_count %></div>
+      <div class="follow-div">Following::<%= @following_count %></div>
+    </div>
+  </div>
+</div>
+<% else %>
+  <%= button_to "Sign in", new_user_session_path %> 
+<% end %>
